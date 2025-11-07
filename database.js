@@ -9,7 +9,7 @@ class Database {
                 console.error('Erro ao conectar com o banco:', err);
             } else {
                 console.log('✅ Conectado ao banco SQLite.');
-     c           this.initDatabase();
+                this.initDatabase();
             }
         });
     }
