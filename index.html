@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Compatibilidade - Brisanet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- SEU CONTEÚDO PRINCIPAL AQUI (mantenha igual) -->
+        <header>
+            <div class="header-top">
+                <img src="logo.png" alt="Logo Brisanet" class="logo">
+                <div class="header-text">
+                    <h1><i class="fas fa-mobile-alt"></i> Guia de Compatibilidade</h1>
+                    <div class="subtitle">Encontre seu aparelho e verifique a compatibilidade com a rede Brisanet</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input"
+                    placeholder="Digite o modelo do aparelho (ex: iPhone 14, Moto G54)...">
+                <button class="search-btn"><i class="fas fa-search"></i> Buscar</button>
+                <button class="clear-btn"><i class="fas fa-times"></i> Limpar</button>
+            </div>
+
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="voz-dados">Voz e Dados</button>
+                <button class="filter-btn" data-filter="apenas-dados">Apenas Dados</button>
+                <button class="filter-btn" data-filter="roaming">Roaming</button>
+                <button class="filter-btn" data-filter="5g">5G</button>
+            </div>
+
+            <div class="search-tips">
+                <p><i class="fas fa-lightbulb"></i> <strong>Dica:</strong> Digite apenas palavras-chave como "iPhone",
+                    "Galaxy" ou "Moto" para encontrar todos os modelos da marca.</p>
+            </div>
+            <br>
+            <div class="suggestion-box">
+                <p>
+                    <i class="fas fa-plus-circle"></i>
+                    <strong>Não encontrou seu aparelho?</strong>
+                    <a href="mailto:agilitytelecomguia5g@gmail.com?subject=Atualizar%20lista%20de%20aparelhos&body=Marca:%0AModelo:%0ACompatibilidade:%0A%0AObservações:"
+                        class="suggestion-link">
+                        Clique aqui para nos enviar as informações
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section class="results-container">
+            <div class="results-header">
+                <h2>Resultados da Busca</h2>
+                <div class="results-count">Mostrando <span id="result-count">0</span> aparelhos</div>
+            </div>
+
+            <div class="results-grid" id="results-grid">
+                <!-- Os resultados serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <section class="guide-container">
+            <h2 class="guide-title"><i class="fas fa-info-circle"></i> Guia de Uso</h2>
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <h3>Busque seu aparelho</h3>
+                    <p>Digite o nome do modelo na barra de busca. Você pode pesquisar por marca (Samsung, Apple) ou
+                        modelo específico (iPhone 14, Moto G54).</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <h3>Filtre os resultados</h3>
+                    <p>Use os botões de filtro para mostrar apenas aparelhos com Voz e Dados, Apenas Dados, em Roaming
+                        ou com 5G.</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <h3>Verifique a compatibilidade</h3>
+                    <p>Identifique o status do seu aparelho pelas cores: Verde (completo), Amarelo (apenas dados) ou
+                        Vermelho (roaming).</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <h3>Limpe a busca</h3>
+                    <p>Use o botão "Limpar" para resetar a busca e voltar a ver todos os aparelhos.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <section id="contato" class="contact-section">
+                <div class="footer-content">
+                    <img src="logo.png" alt="Logo Brisanet" class="footer-logo">
+                    <div class="contact-info">
+                        <p class="footer-text">
+                            Agility Telecom Pentecoste
+                            <br>
+                            Autor: Carlos Eduardo e Elizangela Silva
+                            <br>
+                            Ano: 2025
+                            <br>
+                            Contato: <a
+                                href="mailto:agilitytelecomguia5g@gmail.com?subject=Consulta%20sobre%20Compatibilidade%20de%20Aparelhos&body=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20compatibilidade%20do%20meu%20aparelho%20com%20a%20rede%20Brisanet."
+                                class="email-link">agilitytelecomguia5g@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="copyright-text">&copy; 2025 - Todos os direitos reservados.</p>
+                    <p>Versão: 3.0.0</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- ========== SISTEMA ADMINISTRATIVO ========== -->
+    
+    <!-- Modal de Login Admin -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> Acesso Administrativo</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Admin Flutuante -->
+    <div class="admin-float-btn" id="adminFloatBtn">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- Painel Admin (aparece após login) -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-header">
+            <h3><i class="fas fa-tools"></i> Painel Administrativo</h3>
+            <button id="logoutBtn" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </div>
+
+        <div class="admin-content">
+            <div class="admin-actions">
+                <button id="addDeviceBtn" class="admin-btn primary">
+                    <i class="fas fa-plus"></i> Adicionar Aparelho
+                </button>
+                <button id="exportArrayBtn" class="admin-btn warning">
+                    <i class="fas fa-code"></i> Exportar Array
+                </button>
+                <button id="refreshListBtn" class="admin-btn secondary">
+                    <i class="fas fa-sync"></i> Atualizar Lista
+                </button>
+            </div>
+
+            <!-- SEÇÃO DE EDIÇÃO DIRETA NO PAINEL -->
+<div id="editSection" class="edit-section" style="display: none;">
+    <div class="edit-section-header">
+        <h4><i class="fas fa-edit"></i> Editar Aparelho</h4>
+        <button id="closeEditBtn" class="close-edit-btn">
+            <i class="fas fa-times"></i> Fechar
+        </button>
+    </div>
+    <form id="editDeviceForm" class="edit-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="editBrand">Marca:</label>
+                <input type="text" id="editBrand" required>
+            </div>
+            <div class="form-group">
+                <label for="editModel">Modelo:</label>
+                <input type="text" id="editModel" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="editStatus">Status:</label>
+                <select id="editStatus" required>
+                    <option value="voz-dados">Voz e Dados</option>
+                    <option value="apenas-dados">Apenas Dados</option>
+                    <option value="roaming">Roaming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="edit5g">Compatibilidade 5G:</label>
+                <select id="edit5g" required>
+                    <option value="true">Sim</option>
+                    <option value="false" selected>Não</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" id="cancelEditBtn" class="cancel-btn">
+                <i class="fas fa-times"></i> Cancelar
+            </button>
+            <button type="submit" class="save-btn">
+                <i class="fas fa-save"></i> Salvar Alterações
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- SEÇÃO DE ADIÇÃO DIRETA NO PAINEL -->
+<div id="addSection" class="edit-section" style="display: none;">
+    <div class="edit-section-header">
+        <h4><i class="fas fa-plus"></i> Adicionar Novo Aparelho</h4>
+        <button id="closeAddBtn" class="close-edit-btn">
+            <i class="fas fa-times"></i> Fechar
+        </button>
+    </div>
+    <form id="addDeviceForm" class="edit-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="addBrand">Marca:</label>
+                <input type="text" id="addBrand" required>
+            </div>
+            <div class="form-group">
+                <label for="addModel">Modelo:</label>
+                <input type="text" id="addModel" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="addStatus">Status:</label>
+                <select id="addStatus" required>
+                    <option value="voz-dados">Voz e Dados</option>
+                    <option value="apenas-dados">Apenas Dados</option>
+                    <option value="roaming">Roaming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="add5g">Compatibilidade 5G:</label>
+                <select id="add5g" required>
+                    <option value="true">Sim</option>
+                    <option value="false" selected>Não</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" id="cancelAddBtn" class="cancel-btn">
+                <i class="fas fa-times"></i> Cancelar
+            </button>
+            <button type="submit" class="save-btn">
+                <i class="fas fa-save"></i> Adicionar Aparelho
+            </button>
+        </div>
+    </form>
+</div>
+
+            <!-- Busca e Lista -->
+            <div class="admin-search-direct">
+                <div class="search-direct-input">
+                    <input type="text" id="adminSearchDirect" placeholder="Buscar aparelho por marca ou modelo...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="search-results-count">
+                    Mostrando <span id="adminResultsCount">0</span> aparelhos
+                </div>
+            </div>
+
+            <div class="devices-management">
+                <h4>Gerenciar Aparelhos Cadastrados</h4>
+                <div id="adminDevicesList" class="devices-list">
+                    <!-- Lista de aparelhos será inserida aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REMOVA OS MODAIS ANTIGOS - NÃO SÃO MAIS NECESSÁRIOS -->
+    <!-- 
+    <div id="editModal" class="modal">...</div>
+    <div id="addModal" class="modal">...</div> 
+    -->
+
+    <script src="script.js"></script>
+</body>
+</html>
